@@ -3,7 +3,7 @@ import { cart } from '../store/cart'
 </script>
 
 <template>
-  <div class="p-4">
+  <div class="p-4 bg-white dark:bg-gray-800 text-black dark:text-white min-h-screen">
     <h1 class="text-2xl font-bold mb-4">Cart</h1>
 
     <div v-if="cart.items.length === 0">

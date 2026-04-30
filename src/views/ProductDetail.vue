@@ -13,7 +13,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div v-if="product" class="p-4">
+  <div v-if="product" class="p-4 bg-white dark:bg-gray-800 text-black dark:text-white min-h-screen">
     <img :src="product.thumbnail" class="w-64" />
     <h1 class="text-2xl font-bold">{{ product.title }}</h1>
     <p>{{ product.description }}</p>

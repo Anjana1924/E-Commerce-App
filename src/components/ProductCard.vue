@@ -2,7 +2,6 @@
 import type { Product } from '../types/product'
 import { cart } from '../store/cart'
 
-// ✅ assign props to a variable
 const props = defineProps<{ product: Product }>()
 
 const addToCart = () => {
@@ -11,7 +10,9 @@ const addToCart = () => {
 </script>
 
 <template>
-  <div class="border p-4 rounded shadow hover:scale-105 transition">
+  <div class="border p-4 rounded shadow hover:scale-105 transition 
+            bg-white dark:bg-gray-700 
+            text-black dark:text-white">
     <img :src="props.product.thumbnail" class="w-full h-40 object-contain rounded" />
     <h2 class="font-bold">{{ props.product.title }}</h2>
     <p>${{ props.product.price }}</p>

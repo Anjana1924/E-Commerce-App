@@ -20,8 +20,8 @@ const filteredProducts = computed(() =>
 </script>
 
 <template>
-  <div class="p-4">
-    <input v-model="search" placeholder="Search....." class="border p-2 mb-4 w-full" />
+<div class="p-4 bg-white dark:bg-gray-800 text-black dark:text-white min-h-screen">
+      <input v-model="search" placeholder="Search....." class="border p-2 mb-4 w-full" />
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <ProductCard v-for="p in filteredProducts" :key="p.id" :product="p" />
