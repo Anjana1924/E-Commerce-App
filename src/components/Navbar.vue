@@ -1,3 +1,7 @@
+<script setup>
+import { cart } from '../store/cart'
+</script>
+
 <template>
   <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
     
@@ -15,6 +19,9 @@
       <router-link to="/signup" class="bg-white text-blue-600 px-3 py-1 rounded">
         Sign Up
       </router-link>
+      <router-link to="/cart" class="hover:underline">
+  Cart ({{ cart.items.length }})
+</router-link>
     </div>
 
   </nav>
