@@ -12,7 +12,7 @@ const addToCart = () => {
 
 <template>
   <div class="border p-4 rounded shadow hover:scale-105 transition">
-    <img :src="props.product.thumbnail" class="w-full h-40 object-cover" />
+    <img :src="props.product.thumbnail" class="w-full h-40 object-contain rounded" />
     <h2 class="font-bold">{{ props.product.title }}</h2>
     <p>${{ props.product.price }}</p>
 
