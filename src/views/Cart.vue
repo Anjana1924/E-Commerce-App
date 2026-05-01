@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { cart } from '../store/cart'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goBack = () => {
+  router.back() // go to previous page
+}
+
+const total = computed(() =>
+  cart.items.reduce((sum, item) => sum + item.price, 0)
+)
 </script>
 
 <template>
@@ -22,6 +34,29 @@ import { cart } from '../store/cart'
           Remove
         </button>
       </div>
-    </div>
+        <div class="mt-4 text-xl font-bold">
+    Total: ${{ total.toFixed(2) }}
   </div>
+  <div class="mt-6 flex justify-between items-center">
+
+  
+
+  <!-- 💳 Checkout Button -->
+  <button 
+    class="bg-blue-600 text-white px-4 py-2 rounded ml-auto"
+  >
+    Checkout
+  </button>
+
+</div>
+
+</div>
+<button 
+    @click="goBack"
+    class="bg-gray-500 text-white px-4 py-2 rounded"
+  >
+    ← Back
+  </button>
+    </div>
+  
 </template>

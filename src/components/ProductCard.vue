@@ -16,8 +16,11 @@ const addToCart = () => {
     <img :src="props.product.thumbnail" class="w-full h-40 object-contain rounded" />
     <h2 class="font-bold">{{ props.product.title }}</h2>
     <p>${{ props.product.price }}</p>
+    <p class="text-yellow-500">
+  ⭐ {{ product.rating }}
+</p>
 
-    <button @click="addToCart" class="bg-green-500 text-white px-2 py-1 mt-2">
+    <button @click="addToCart" class="bg-blue-500 text-white px-2 py-1 mt-2">
       Add to Cart
     </button>
 
